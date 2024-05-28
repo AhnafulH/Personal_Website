@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-
+import AuroraBackground from "@/components/AuroraBackground";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
