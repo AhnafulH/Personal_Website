@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
+import ScrollBtn from './ScrollBtn';
 
 const HeroSection = () => {
   return (
@@ -51,11 +52,13 @@ const HeroSection = () => {
               height={300}
             />
           </div>
-
-
         </div>
       </div>
+
+      <ScrollBtn/>
     </section>
+
+
   );
 };
 
