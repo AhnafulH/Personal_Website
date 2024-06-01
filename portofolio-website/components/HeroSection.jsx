@@ -55,7 +55,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <ScrollBtn/>
+      {/* <ScrollBtn/> */}
     </section>
 
 
