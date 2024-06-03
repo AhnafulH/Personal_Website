@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Header/>
           <HeroSection/>
           <About/>
+          <Experience/>
         </div>
       </main>
       </AuroraBackground>
