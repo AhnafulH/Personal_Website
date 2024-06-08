@@ -1,24 +1,31 @@
-import React from 'react'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { textVariant } from "@/utils/motion";
+const textVariant = () => ({
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+});
 
-const Experience = () => {
+const Experience: React.FC = () => {
   return (
-    <motion.div variants={textVariant()}>
-      <p>
-        What I have done so far
-      </p>
-      <p>
-        Experience
-      </p>
-      <VerticalTimeline>
-      
-      </VerticalTimeline>
-    </motion.div>
-  )
-}
+    <div className="relative z-10 p-8">
+        <h2 className="text-2xl font-bold mb-4">
+          What I have done so far
+        </h2>
+        <p className="text-lg mb-8">
+          Experience
+        </p>
+      </div>
+  );
+};
 
-export default Experience
+export default Experience;
