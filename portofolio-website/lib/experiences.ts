@@ -1,9 +1,19 @@
+import React from "react";
+// import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.jpeg'
+import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
+
+
+
 const experiences = [
     {
         title: " Functional Safety Software Development Student",
-        compay: "BlackBerry QNX",
+        company: "BlackBerry QNX",
         date: "January 2024 - August 2024",
-        points: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        logo:  blackberryqnx_logo,
+        points: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Vel quam elementum pulvinar etiam non quam lacus suspendisse.",
+        "Tellus molestie nunc non blandit",
+        ],
     },
 ];
 

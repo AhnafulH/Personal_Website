@@ -3,7 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-
+import Experience2
+ from "@/components/Experience2";
 export default function Home() {
   return (
     <AuroraBackground>
@@ -12,7 +13,8 @@ export default function Home() {
           <Header/>
           <HeroSection/>
           <About/>
-          <Experience/>
+          {/* <Experience/> */}
+          <Experience2/>
         </div>
       </main>
       </AuroraBackground>
