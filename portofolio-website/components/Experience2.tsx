@@ -6,17 +6,24 @@ import 'react-vertical-timeline-component/style.min.css';
 import { CgWorkAlt } from "react-icons/cg";
 
 import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
-
+// import blackberryqnx_logo1 from '@/public/images/blackberryqnx_logo1.jpeg'
 
 const Experience2 = () => {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline
+      animate={true}
+    >
     <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+        contentStyle={{ background: '#f3f4f6', color: '#000',
+          boxShadow: "none",
+          border: "1px solid rgba(0, 0, 0, 0.05)",
+          textAlign: "left",
+          padding: "1.3rem 2rem",
+        }}
+        contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
         date="2011 - present"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        iconStyle={{ background: '#000', color: '#fff' }}
         icon={
             <div className='flex justify-center items-center w-full h-full'>
               <img
