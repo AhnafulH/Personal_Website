@@ -6,7 +6,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import { CgWorkAlt } from "react-icons/cg";
 
 import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
-// import blackberryqnx_logo1 from '@/public/images/blackberryqnx_logo1.jpeg'
+// import blackberryqnx_logo1 from '@/public/images/blackberryqnx_logo1.jpeg
+
 
 const Experience2 = () => {
   return (
