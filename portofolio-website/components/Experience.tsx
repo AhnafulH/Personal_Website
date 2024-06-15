@@ -64,9 +64,6 @@ const Experience = () => {
       </motion.div>
       <div className="flex justify-center items-center w-full h-full">
         <VerticalTimeline>
-          {/* {experiences.map((experience, index) => ( */}
-            {/* // <ExperienceCard key={index} experience={experience}/> */}
-            {/* <React.Fragment key={index}> */}
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#000', color: '#000' }}

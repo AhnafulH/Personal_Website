@@ -3,7 +3,6 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { CgWorkAlt } from "react-icons/cg";
 
 import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
 import { experiences } from '@/lib/experiences';
@@ -15,9 +14,47 @@ const Experience2 = () => {
     <VerticalTimeline
       animate={true}
     >
-      {experiences.map((item, index)=> (
-        
-      ))}
+      {experiences.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              visible={true}
+              contentStyle={{
+                background: "rgba(255, 255, 255, 0.05)",
+                boxShadow: "none",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
+              }}
+              date={item.date}
+              icon={<div className='flex justify-center items-center w-full h-full'>
+                <img
+                  src={blackberryqnx_logo.src}
+                  alt="bb"
+                  className='w-[60%] h-[60%] object-contain'
+                />
+              </div>}
+              iconStyle={{
+                background: "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
+              }}
+            >
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-0">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description}
+              </p>
+
+              <ul className="list-disc">
+              {item.Points.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+            </VerticalTimelineElement>
+          </React.Fragment>
+        ))}
     <VerticalTimelineElement
         className="vertical-timeline-element--work"
         contentStyle={{ background: '#f3f4f6', color: '#000',
