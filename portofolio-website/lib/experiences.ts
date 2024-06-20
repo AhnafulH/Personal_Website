@@ -4,7 +4,7 @@ import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
 
 const experiences = [
     {
-        title: " Functional Safety Software Development Student",
+        title: "Functional Safety Software Development Student",
         company: "BlackBerry QNX",
         location: "Ottawa, ON",
         date: "January 2024 - August 2024",

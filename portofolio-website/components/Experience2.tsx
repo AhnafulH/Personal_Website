@@ -31,7 +31,7 @@ const Experience2 = () => {
               date={item.date}
               icon={<div className='flex justify-center items-center w-full h-full'>
                 <img
-                  src={blackberryqnx_logo.src}
+                  src={item.logo.src}
                   alt="bb"
                   className='w-[60%] h-[60%] object-contain'
                 />

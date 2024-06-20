@@ -5,6 +5,8 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Experience2
  from "@/components/Experience2";
+import Skills from "@/components/Skills"
+
 export default function Home() {
   return (
     <AuroraBackground>
@@ -15,6 +17,7 @@ export default function Home() {
           <About/>
           {/* <Experience/> */}
           <Experience2/>
+          <Skills/>
         </div>
       </main>
       </AuroraBackground>
