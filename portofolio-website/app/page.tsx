@@ -6,6 +6,7 @@ import Experience from "@/components/Experience";
 import Experience2
  from "@/components/Experience2";
 import Skills from "@/components/Skills"
+import Skills2 from "@/components/Skills2"
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
           <About/>
           {/* <Experience/> */}
           <Experience2/>
-          <Skills/>
+          {/* <Skills/> */}
+          <Skills2/>
         </div>
       </main>
       </AuroraBackground>
