@@ -9,48 +9,60 @@ import react from '@/public/skills_logo/react.svg'
 import sqlite from '@/public/skills_logo/sqlite.svg'
 import twcss from '@/public/skills_logo/tailwind-css.svg'
 
-const skill = [
+import { IconType } from 'react-icons';
+import { SiCplusplus, SiC, SiPython, SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiReact, SiSqlite, SiTailwindcss } from 'react-icons/si';
+import { FaAws } from "react-icons/fa";
+
+type Skill = {
+    skill_name: string;
+    icon: IconType;
+};
+
+const skill: Skill[] = [
     {
         skill_name: "C++",
-        icon: cpp,
+        icon: SiCplusplus,
     },
     {
         skill_name: "C",
-        icon: c,
+        icon: SiC,
     },
     {
         skill_name: "Python",
-        icon: python,
+        icon: SiPython,
     },
     {
         skill_name: "Javascript",
-        icon: js,
+        icon: SiJavascript,
     },
     {
         skill_name: "HTML",
-        icon: html,
+        icon: SiHtml5,
     },
     {
         skill_name: "CSS",
-        icon: css,
+        icon: SiCss3,
     },
     {
         skill_name: "Next JS",
-        icon: njs,
+        icon: SiNextdotjs,
     },
     {
         skill_name: "React",
-        icon: react,
+        icon: SiReact,
     },
     {
-        skill_name: "C++",
-        icon: sqlite,
+        skill_name: "SQLite",
+        icon: SiSqlite,
     },
     {
         skill_name: "Tailwind CSS",
-        icon: twcss,
+        icon: SiTailwindcss,
     },
-    
+    {
+        skill_name: "AWS",
+        icon: FaAws,
+    }
 ];
 
 export { skill };
