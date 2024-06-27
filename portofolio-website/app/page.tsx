@@ -8,6 +8,7 @@ import Experience2
 import Skills from "@/components/Skills"
 import Skills2 from "@/components/Skills2"
 import Skills3 from "@/components/Skills3";
+import Project from "@/components/Project";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           {/* <Skills/> */}
           {/* <Skills2/> */}
           <Skills3/>
+          <Project/>
         </div>
       </main>
       </AuroraBackground>
