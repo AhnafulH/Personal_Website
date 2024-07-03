@@ -8,7 +8,9 @@ const Project = () => {
         <p className="text-lg text-gray-600 py-5">A small selection of recent projects</p>
       </div>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-
+        <div className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
+          Project title
+        </div>
       </div>
     </section>
   )
