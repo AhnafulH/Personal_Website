@@ -1,50 +1,57 @@
-import React from 'react'
+"use client";
+ 
+import Image from "next/image";
+import React from "react";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/project-card";
+import Link from "next/link";
 
 const Project2 = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-      <div className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
-        <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-          <img
-            src="/images/smart_traffic_control.png" // Replace with your project image path
-            alt="Project"
-            className="w-full h-full object-cover lg:rounded-3xl"
-          />
-        </div>
-
-        <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-          Project Title
-        </h1>
-
-        <p
-          className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-          style={{
-            color: "#BEC1DD",
-            margin: "1vh 0",
-          }}
+    <CardContainer className="inter-var">
+    <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+      <CardItem
+        translateZ="50"
+        className="text-xl font-bold text-neutral-600 dark:text-white"
+      >
+        Make things float in air
+      </CardItem>
+      <CardItem
+        as="p"
+        translateZ="60"
+        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+      >
+        Hover over this card to unleash the power of CSS perspective
+      </CardItem>
+      <CardItem translateZ="100" className="w-full mt-4">
+        <Image
+          src="/images/p4.svg"
+          height="1000"
+          width="1000"
+          className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </CardItem>
+      <div className="flex justify-between items-center mt-20">
+        <CardItem
+          translateZ={20}
+          as={Link}
+          href="https://twitter.com/mannupaaji"
+          target="__blank"
+          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
         >
-          Project description goes here. It should be brief and informative.
-        </p>
-
-        <div className="flex justify-center items-center mt-7 mb-3">
-          <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-            Check Live Site
-          </p>
-          <svg
-            className="ms-3 w-6 h-6 text-purple"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
+          Try now →
+        </CardItem>
+        <CardItem
+          translateZ={20}
+          translateX={40}
+          as="button"
+          className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+        >
+          Sign up
+        </CardItem>
       </div>
-    </div>
+    </CardBody>
+  </CardContainer>
   )
 }
 
