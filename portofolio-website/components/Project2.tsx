@@ -8,8 +8,12 @@ import Link from "next/link";
 const Project2 = () => {
   return (
     <section>
+       <div className="text-center mt-10">
+        <h2 className="font-bold text-4xl md:text-5xl text-center">Projects</h2>
+        <p className="text-lg text-gray-600 py-5">A small selection of recent projects</p>
+      </div>
       <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-3xl p-6 border  ">
         <CardItem 
           translateZ="100" className="w-full mt-4"
           // rotateX={20}
@@ -44,6 +48,28 @@ const Project2 = () => {
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               </p>
         </CardItem>
+        <div className="flex justify-start items-center mt-10 gap-2">
+          <CardItem
+            translateZ={20}
+            translateX={-30}
+          >
+            <img
+              src="/devpost-icon.svg"
+              alt="github"
+              height={30}
+              width={30}
+            />
+          </CardItem>
+          <CardItem
+            translateZ={20}
+            translateX={-30}
+          >
+            <img
+              src="/iconmonstr-github-1.svg"
+              alt="github"
+            />
+          </CardItem>
+        </div>
       </CardBody>
 
       
