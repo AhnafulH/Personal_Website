@@ -10,6 +10,8 @@ import Skills2 from "@/components/Skills2"
 import Skills3 from "@/components/Skills3";
 import Project from "@/components/Project";
 import ProjectCard from "@/components/Project2";
+import Testimonial from "@/components/Testimonial";
+import Testimonial2 from "@/components/Testimonial2";
 
 export default function Home() {
   return (
@@ -26,6 +28,9 @@ export default function Home() {
           <Skills3/>
           {/* <Project/> */}
           <ProjectCard/>
+          <Testimonial/>
+          <Testimonial2/>
+
         </div>
       </main>
       </AuroraBackground>
