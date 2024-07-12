@@ -9,7 +9,7 @@ const Testimonial = () => {
       </div>
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 mb-10">
     <div className="flex items-center mb-4">
-      <img className="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Avatar" />
+      <img className="w-20 h-20 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Avatar" />
       <div>
         <p className="text-xl font-semibold text-gray-900">John Doe</p>
         <p className="text-gray-600">CEO, Company</p>
