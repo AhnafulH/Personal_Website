@@ -12,6 +12,7 @@ import Project from "@/components/Project";
 import ProjectCard from "@/components/Project2";
 import Testimonial from "@/components/Testimonial";
 import Testimonial2 from "@/components/Testimonial2";
+import Testimonial3 from "@/components/Testimonial3";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <ProjectCard/>
           <Testimonial/>
           <Testimonial2/>
+          <Testimonial3/>
 
         </div>
       </main>
