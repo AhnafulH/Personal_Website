@@ -22,7 +22,7 @@ const Testimonial3 = () => {
           <img className="w-20 h-20 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Avatar" />
           <div>
             <p className="text-xl font-bold text-gray-900">John Doe</p>
-            <p className="text-gray-600">Web Dev / Data Science Content Creator | Co-founder at Atheros Learning</p>
+            <p className="text-gray-600">Director Functional Safety</p>
             <p className="text-gray-600">Core-OS, BlackBerry QNX</p>
           </div>
         </div>

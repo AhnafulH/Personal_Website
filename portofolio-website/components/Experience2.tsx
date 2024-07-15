@@ -6,7 +6,6 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
 import { experiences } from '@/lib/experiences';
-// import blackberryqnx_logo1 from '@/public/images/blackberryqnx_logo1.jpeg
 
 
 const Experience2 = () => {
