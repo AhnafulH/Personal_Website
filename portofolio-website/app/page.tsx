@@ -13,6 +13,7 @@ import ProjectCard from "@/components/Project2";
 import Testimonial from "@/components/Testimonial";
 import Testimonial2 from "@/components/Testimonial2";
 import Testimonial3 from "@/components/Testimonial3";
+import Contact from "@/components/Contact"
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           <Testimonial/>
           <Testimonial2/>
           <Testimonial3/>
+          <Contact/>
 
         </div>
       </main>

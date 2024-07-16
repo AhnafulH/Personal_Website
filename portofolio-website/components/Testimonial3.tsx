@@ -15,7 +15,7 @@ const Testimonial3 = () => {
 <div className="w-40 ...">w-40</div>
 <div className="w-32 ...">w-32</div>
 <div className="w-24 ...">w-24</div> */}
-    <div className="gap-5">
+    <div className="gap-5 flex">
       <div className="w-1/2 rounded-lg overflow-hidden shadow-lg bg-white p-6 border-2 border-red-300">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center">
