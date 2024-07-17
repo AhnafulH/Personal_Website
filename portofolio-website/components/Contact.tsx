@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact2 = () => {
   return (
     <div>
         <div className="text-center mb-10 mt-10">
@@ -9,7 +9,6 @@ const Contact = () => {
         </div>
 
         <div className="border-2 border-red-300">
-            content
             <div className="border-2 border-green-300 w-full bg-slate-200 rounded-xl mb-3">
                 Name
             </div>
@@ -21,4 +20,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact2
