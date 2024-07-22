@@ -3,7 +3,10 @@ import React from 'react'
 const Testimonial3 = () => {
   return (
     <div> 
-        
+        <div className="text-center mt-10">
+        <h2 className="font-bold text-4xl md:text-5xl text-center">Testimonial</h2>
+        <p className="text-lg text-gray-600 py-5">A small selection of recent projects</p>
+      </div>
     <div className="w-screen h-20 bg-gray-200 border-2 border-red-300">
     <div className="w-1/2 border-2 border-green-400">
         new width

@@ -19,7 +19,7 @@ import Contact from "@/components/Contact2";
 export default function Home() {
   return (
     <AuroraBackground>
-      <main className="flex min-h-screen flex-col items-center">
+      <main className="min-h-screen flex flex-col items-center">
         <div className="container mx-auto px-12 py-4">
           <Header/>
           <HeroSection/>
@@ -31,8 +31,8 @@ export default function Home() {
           <Skills3/>
           {/* <Project/> */}
           <ProjectCard/>
-          <Testimonial/>
-          <Testimonial2/>
+          {/* <Testimonial/> */}
+          {/* <Testimonial2/> */}
           <Testimonial3/>
           {/* <Contact/> */}
           <Contact2/>

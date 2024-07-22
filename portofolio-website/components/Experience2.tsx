@@ -10,6 +10,11 @@ import { experiences } from '@/lib/experiences';
 
 const Experience2 = () => {
   return (
+    <section>
+      <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold mb-4">Experience</h2>
+          <p className="text-lg text-gray-600">My work experiences</p>
+        </div>
     <VerticalTimeline
       animate={true}
     >
@@ -106,6 +111,7 @@ const Experience2 = () => {
         </p>
     </VerticalTimelineElement>
 </VerticalTimeline>
+</section>
   )
 }
 
