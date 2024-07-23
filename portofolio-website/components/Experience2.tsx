@@ -10,7 +10,7 @@ import { experiences } from '@/lib/experiences';
 
 const Experience2 = () => {
   return (
-    <section>
+    <section id="experience">
       <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Experience</h2>
           <p className="text-lg text-gray-600">My work experiences</p>

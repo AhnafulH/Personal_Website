@@ -3,7 +3,9 @@ import React from 'react'
 function About() {
   return (
     <section className="mb-28 max-w-[45rem] text-center leading-8 border-2 border-red-300 mx-auto
-      sm:mb-40">
+      sm:mb-40"
+      id="about"
+      >
         <h2 className="text-3xl font-medium mb-8">
             About Me
         </h2>

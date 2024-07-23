@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Header2 from "@/components/Header2";
 import HeroSection from "@/components/HeroSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import About from "@/components/About";
@@ -22,6 +23,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col items-center">
         <div className="container mx-auto px-12 py-4">
           <Header/>
+          {/* <Header2/> */}
           <HeroSection/>
           <About/>
           {/* <Experience/> */}
