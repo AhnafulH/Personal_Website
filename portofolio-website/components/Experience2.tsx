@@ -1,16 +1,19 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
 import { experiences } from '@/lib/experiences';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 
 const Experience2 = () => {
   return (
-    <section id="experience">
+
+    <section id="experience" className="scroll-mt-28">
       <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Experience</h2>
           <p className="text-lg text-gray-600">My work experiences</p>

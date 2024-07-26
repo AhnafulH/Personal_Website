@@ -1,9 +1,24 @@
-import React from 'react'
+"use client"
+
+import { useActiveSectionContext } from '@/context/active-section-context';
+import React, { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 function About() {
+  const {ref, inView}= useInView({
+    threshold: 0.7,
+  });
+  const {setActiveSection} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection]);
   return (
-    <section className="mb-28 max-w-[45rem] text-center leading-8 border-2 border-red-300 mx-auto
-      sm:mb-40"
+    <section className="mb-28 mt-40 max-w-[45rem] text-center leading-8 border-2 border-red-300 mx-auto
+      sm:mb-40 scroll-mt-28"
+      ref={ref}
       id="about"
       >
         <h2 className="text-3xl font-medium mb-8">

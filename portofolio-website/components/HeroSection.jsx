@@ -1,13 +1,25 @@
 "use client";
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import ScrollBtn from './ScrollBtn';
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 const HeroSection = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.5,
+  });
+  const {setActiveSection} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
   return (
-    <section id="home">
+    <section className="scroll-mt-[50rem]" id="home" ref={ref}>
       <div className="grid grid-cols-1 sm:grid-cols-12 py-20">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold"> 

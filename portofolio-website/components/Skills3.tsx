@@ -7,7 +7,7 @@ import { skill } from '@/lib/skill'
 import Image from 'next/image'
 const Skills3 = () => {
   return (
-    <section id="skills">
+    <section id="skills" className="scroll-mt-28">
       <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">My Skills</h2>
           <p className="text-lg text-gray-600">Technologies I have worked with</p>

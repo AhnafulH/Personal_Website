@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Project2 = () => {
   return (
-    <section id="projects">
+    <section className="scroll-mt-28" id="projects">
        <div className="text-center mt-10">
         <h2 className="font-bold text-4xl md:text-5xl text-center">Projects</h2>
         <p className="text-lg text-gray-600 py-5">A small selection of recent projects</p>
