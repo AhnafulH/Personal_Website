@@ -11,9 +11,19 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 
 const Experience2 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.4,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Experience");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
 
-    <section id="experience" className="scroll-mt-28">
+    <section id="experience" className="scroll-mt-28" ref={ref}>
       <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Experience</h2>
           <p className="text-lg text-gray-600">My work experiences</p>

@@ -8,13 +8,13 @@ function About() {
   const {ref, inView}= useInView({
     threshold: 0.7,
   });
-  const {setActiveSection} = useActiveSectionContext();
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
   
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("About");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
     <section className="mb-28 mt-40 max-w-[45rem] text-center leading-8 border-2 border-red-300 mx-auto
       sm:mb-40 scroll-mt-28"

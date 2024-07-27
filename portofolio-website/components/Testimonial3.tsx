@@ -1,9 +1,24 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 const Testimonial3 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.4,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Testimonial");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
     <section className="scroll-mt-28"
-    id="testimonial">
+    id="testimonial"
+    ref={ref}>
       <div> 
           <div className="text-center mt-10">
           <h2 className="font-bold text-4xl md:text-5xl text-center">Testimonial</h2>
