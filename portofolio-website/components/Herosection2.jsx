@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 import React from 'react';
 const HeroSection2 = () => {
@@ -17,7 +18,7 @@ const HeroSection2 = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}>
-                Hey there! I'm Ahnaful
+                Hey there! I&apos;m Ahnaful
             </motion.h2>
             {/* <motion.h3 
                             className="text-center text-xl md:text-2xl lg:text-3xl font-light leading-snug tracking-wider mt-4"
@@ -27,10 +28,22 @@ const HeroSection2 = () => {
                         >
                             Student | Developer | Engineer from Edmonton, Canada
                         </motion.h3> */}
-             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl my-3">
-            {/* Hi! I&apos;m Ahnaful, Computer Engineering Student based in Edmonton */}
+             {/* <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl my-3">
+            Hi! I&apos;m Ahnaful, Computer Engineering Student based in Edmonton
             Student | Developer | Engineer from Edmonton, Canada
-          </p>
+          </p> */}
+          <motion.p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl my-3"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Student | Developer | Engineer based in Edmonton, Canada
+          </motion.p>
+          <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+        <LinkPreview url="https://tailwindcss.com" className="font-bold">
+          Tailwind CSS
+        </LinkPreview>{" "}
+      </p>
           </div>
         </div>
       </section>
