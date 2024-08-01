@@ -1,9 +1,18 @@
 "use client"
 import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub, FaClipboard} from "react-icons/fa";
+import { SiDevpost } from "react-icons/si";
 import { LinkPreview } from "@/components/ui/link-preview";
 
-import React from 'react';
+import React, {useState} from 'react';
 const HeroSection2 = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('akmahnaf@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+  };
     return (
       <section className="pb-20 pt-36">
         <div className="flex justify-center relative my-20 z-10">
@@ -39,11 +48,35 @@ const HeroSection2 = () => {
           >
             Student | Developer | Engineer based in Edmonton, Canada
           </motion.p>
-          <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+          {/* <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
         <LinkPreview url="https://tailwindcss.com" className="font-bold">
           Tailwind CSS
         </LinkPreview>{" "}
-      </p>
+      </p> */}
+
+          <div className="flex items-center space-x-6 mt-6">
+          <a href="/path/to/your-resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="text-lg text-white bg-blue-600 hover:bg-blue-800 transition duration-300 px-4 py-2 rounded-full">
+                View Resume
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-3xl text-blue-700 hover:text-blue-900 transition duration-300" />
+            </a>
+            <a href="https://github.com/AhnafulH" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
+            </a>
+            <a href="https://devpost.com/Ahnaful" target="_blank" rel="noopener noreferrer">
+              <img src="/devpost-logo.svg" alt="Devpost" className="w-8 h-8 hover:opacity-80 transition duration-300" />
+            </a>
+          </div>
+          <div className="mt-4 flex items-center">
+            <span className="text-lg mr-2">akmahnaf@ualberta.com</span>
+            <button onClick={handleCopyEmail} className="flex items-center text-blue-600 hover:text-blue-800 transition duration-300">
+              <FaClipboard className="text-2xl" />
+              {copied && <span className="ml-2 text-sm text-green-500">Copied!</span>}
+            </button>
+          </div>
           </div>
         </div>
       </section>
