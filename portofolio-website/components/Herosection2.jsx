@@ -61,13 +61,19 @@ const HeroSection2 = () => {
               </button>
             </a>
             <a href="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-3xl text-blue-700 hover:text-blue-900 transition duration-300" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <FaLinkedin className="text-3xl text-blue-700 hover:text-blue-900 transition duration-300" />
+              </div>
             </a>
             <a href="https://github.com/AhnafulH" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
+              </div>
             </a>
             <a href="https://devpost.com/Ahnaful" target="_blank" rel="noopener noreferrer">
-              <img src="/devpost-logo.svg" alt="Devpost" className="w-8 h-8 hover:opacity-80 transition duration-300" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <img src="/devpost-logo.svg" alt="Devpost" className="w-8 h-8 hover:opacity-80 transition duration-300" />
+              </div>
             </a>
           </div>
           <div className="mt-4 flex items-center">
