@@ -20,6 +20,8 @@ type LinkPreviewProps = {
   height?: number;
   quality?: number;
   layout?: string;
+  target?: string;
+  rel?: string;
 } & (
   | { isStatic: true; imageSrc: string }
   | { isStatic?: false; imageSrc?: never }
@@ -35,6 +37,8 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
+  target = "_blank",
+  rel = "noopener noreferrer",
 }: LinkPreviewProps) => {
   let src;
   if (!isStatic) {
@@ -74,6 +78,11 @@ export const LinkPreview = ({
     x.set(offsetFromCenter);
   };
 
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    window.open(url, target, rel);
+  };
+
   return (
     <>
       {isMounted ? (
@@ -99,6 +108,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
+          onClick={handleClick}
           className={cn("text-black dark:text-white", className)}
           href={url}
         >
@@ -131,10 +141,12 @@ export const LinkPreview = ({
                   x: translateX,
                 }}
               >
-                <Link
+                <a
                   href={url}
                   className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src={isStatic ? imageSrc : src}
@@ -146,7 +158,7 @@ export const LinkPreview = ({
                     className="rounded-lg"
                     alt="preview image"
                   />
-                </Link>
+                </a>
               </motion.div>
             )}
           </AnimatePresence>

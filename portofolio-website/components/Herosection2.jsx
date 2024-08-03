@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaClipboard} from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import { LinkPreview } from "@/components/ui/link-preview";
+import Link from "next/link";
 
 import React, {useState} from 'react';
 const HeroSection2 = () => {
@@ -60,29 +61,30 @@ const HeroSection2 = () => {
                 View Resume
               </button>
             </a>
-            <a href="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">
+            <LinkPreview url="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <FaLinkedin className="text-3xl text-blue-700 hover:text-blue-900 transition duration-300" />
               </div>
-            </a>
-            <a href="https://github.com/AhnafulH" target="_blank" rel="noopener noreferrer">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
-              </div>
-            </a>
-            <a href="https://devpost.com/Ahnaful" target="_blank" rel="noopener noreferrer">
+              </LinkPreview>
+            {/* </a> */}
+            <LinkPreview url="https://github.com/AhnafulH">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
+                </div>
+            </LinkPreview>
+            <LinkPreview url="https://devpost.com/Ahnaful" target="_blank" rel="noopener noreferrer">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <img src="/devpost-logo.svg" alt="Devpost" className="w-8 h-8 hover:opacity-80 transition duration-300" />
               </div>
-            </a>
+            </LinkPreview>
           </div>
-          <div className="mt-4 flex items-center">
+          {/* <div className="flex items-center space-x-4 p-4 border rounded-lg bg-white shadow-lg">
             <span className="text-lg mr-2">akmahnaf@ualberta.com</span>
             <button onClick={handleCopyEmail} className="flex items-center text-blue-600 hover:text-blue-800 transition duration-300">
               <FaClipboard className="text-2xl" />
               {copied && <span className="ml-2 text-sm text-green-500">Copied!</span>}
             </button>
-          </div>
+          </div> */}
           </div>
         </div>
       </section>
