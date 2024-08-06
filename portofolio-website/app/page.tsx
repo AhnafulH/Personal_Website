@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Header2 from "@/components/Header2";
-import HeroSection from "@/components/HeroSection";
 import Herosection2 from "@/components/Herosection2"
+import Hersection3 from "@/components/Hersection3"
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -17,6 +17,8 @@ import Testimonial2 from "@/components/Testimonial2";
 import Testimonial3 from "@/components/Testimonial3";
 import Contact2 from "@/components/Contact"
 import Contact from "@/components/Contact2";
+import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
           <Header/>
           {/* <Header2/> */}
           {/* <HeroSection/> */}
+          {/* <Hersection3/> */}
           <Herosection2/>
           <About/>
           {/* <Experience/> */}
@@ -40,6 +43,7 @@ export default function Home() {
           <Testimonial3/>
           {/* <Contact/> */}
           <Contact2/>
+          <Footer/>
 
         </div>
       </main>
