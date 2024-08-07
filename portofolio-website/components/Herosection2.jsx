@@ -2,9 +2,8 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaClipboard, FaCopy} from "react-icons/fa";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { Confetti, ConfettiRef } from '@/components/ui/Confetti';
 import confetti from "canvas-confetti"
-
+import ConfettiButton from '@/components/ui/Confetti'
 import React, {useState, useRef} from 'react';
 
 
@@ -46,53 +45,16 @@ const subheading = "Hey there! I'm Ahnaful";
 const HeroSection2 = () => {
   const words = subheading.split(" ");
   const [copied, setCopied] = useState(false);
-  const confettiRef = useRef<ConfettiRef>(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('akmahnaf@ualberta.ca');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-    // if (confettiRef.current) {
-    //   confettiRef.current.fire();
-    // }
-    const end = Date.now() + 3 * 1000; // 3 seconds
-    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
-    const button = event.currentTarget;
-
-    if (button instanceof HTMLElement) {
-      const rect = button.getBoundingClientRect();
-
-      const frame = () => {
-        if (Date.now() > end) return;
-
-        confetti({
-          particleCount: 2,
-          angle: 60,
-          spread: 55,
-          startVelocity: 60,
-          origin: {
-            x: (rect.left + rect.width / 2) / window.innerWidth,
-            y: (rect.top + rect.height / 2) / window.innerHeight
-          },
-          colors: colors,
-        });
-        confetti({
-          particleCount: 2,
-          angle: 120,
-          spread: 55,
-          startVelocity: 60,
-          origin: {
-            x: (rect.left + rect.width / 2) / window.innerWidth,
-            y: (rect.top + rect.height / 2) / window.innerHeight
-          },
-          colors: colors,
-        });
-
-        requestAnimationFrame(frame);
-      };
-
-      frame();
-    }
+    confetti({
+      particleCount: 100,
+      spread: 90,
+    });
+    
   };
 
     return (
@@ -130,15 +92,13 @@ const HeroSection2 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 3.4 + 0.3 * words.length + 1.3 }}
           >
-            {/* <Confetti useRef={confettiRef} className="absolute left-0 top-0 z-0 size-full" onMouseEnter={() => {
-          confettiRef.current?.fire({}); }}/> */}
-            <div className="flex items-center space-x-1 px-5 py-2 border rounded-full bg-[#003153] shadow-lg">
-              <button onClick={handleCopyEmail} className="flex items-center text-gray-300 hover:text-white transition duration-100">
-                <span className="text-lg mr-2 text-white font-medium">akmahnaf@ualberta.ca</span>
-                  <FaCopy className="text-xl" />
-                  {copied && <span className="ml-2 text-sm text-green-500">Copied!</span>}
-              </button>
-            </div>
+            <button onClick={handleCopyEmail} className="px-5 py-2 border rounded-full bg-[#003153] shadow-lg text-gray-300 hover:text-white transition duration-30">
+              <div className="flex items-center space-x-1">
+                <span className="text-lg mr-2 text-white font-semibold">akmahnaf@ualberta.ca</span>
+                <FaCopy className="text-xl" />
+                {copied && <span className="ml-2 text-sm text-green-500">Copied!</span>}
+              </div>
+            </button>
             <a href="/path/to/your-resume.pdf" target="_blank" rel="noopener noreferrer">
               <button className="text-lg text-white bg-blue-600 hover:bg-blue-800 transition duration-300 px-4 py-2 rounded-full">
                 View Resume
