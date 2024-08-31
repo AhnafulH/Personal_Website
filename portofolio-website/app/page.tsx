@@ -24,24 +24,16 @@ export default function Home() {
   return (
     <AuroraBackground>
       <main className="min-h-screen flex flex-col items-center">
-        <div className="container mx-auto px-12 py-4">
+        <div className="w-full mx-auto px-12 py-4 bg-[#FAF9F6]">
           <Header/>
-          {/* <Header2/> */}
-          {/* <HeroSection/> */}
-          {/* <Hersection3/> */}
           <Herosection2/>
-          <About/>
-          {/* <Experience/> */}
+          {/* <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"> */}
+            <About/>
+          {/* </div> */}
           <Experience2/>
-          {/* <Skills/> */}
-          {/* <Skills2/> */}
           <Skills3/>
-          {/* <Project/> */}
           <ProjectCard/>
-          {/* <Testimonial/> */}
-          {/* <Testimonial2/> */}
           <Testimonial3/>
-          {/* <Contact/> */}
           <Contact2/>
           <Footer/>
 

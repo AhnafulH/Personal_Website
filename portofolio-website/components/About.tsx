@@ -17,25 +17,21 @@ function About() {
   }, [inView, setActiveSection, timeOfLastClick]);
   return (
     <section className="mb-28 mt-40 max-w-[45rem] text-center leading-8 border-2 border-red-300 mx-auto
-      sm:mb-40 scroll-mt-28"
+      sm:mb-40 scroll-mt-28 text-lg"
       ref={ref}
       id="about"
       >
-        <h2 className="text-3xl font-medium mb-8">
+        <h2 className="text-4xl font-medium mb-2">
             About Me
         </h2>
 
-        <p className="mb-3" >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Mi proin sed libero enim sed faucibus turpis in eu. 
-        At lectus urna duis convallis convallis tellus. Egestas maecenas pharetra convallis posuere morbi leo. Duis at tellus at urna condimentum mattis pellentesque id. 
-        Elementum integer enim neque volutpat ac tincidunt vitae semper. Viverra nibh cras pulvinar mattis. 
-        </p>
-        Justo donec enim diam vulputate ut pharetra sit amet. Netus et malesuada fames ac turpis egestas integer eget aliquet. 
-        Natoque penatibus et magnis dis. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna. Enim ut tellus elementum sagittis. 
-        Eget est lorem ipsum dolor sit amet consectetur adipiscing. Elementum tempus egestas sed sed risus pretium quam vulputate.
-        <p>
+        <p className="text-lg text-gray-600 mb-8">Outside the Lines</p>
 
+        <p className="mb-3">
+          As a passionate <span className="font-bold">Computer Engineering</span> student at the <span className="font-bold">University of Alberta</span>, my journey in technology began with a deep curiosity about how things work, which soon blossomed into a love for <span className="font-bold">coding</span> and <span className="font-bold">problem-solving</span>. Over the years, I've developed proficiency in various programming languages and have continuously refined my technical skills.
+        </p>
+        <p className="mb-3">
+          In my spare time, I enjoy exploring <span className="font-bold">new technologies</span>, contributing to <span className="font-bold">open-source projects</span>, and delving into the intersections of <span className="font-bold">software</span> and <span className="font-bold">hardware</span>. When I'm not at the computer, I love playing <span className="font-bold">football</span> and am always eager to try out new sports. As I advance in my journey, I’m excited to apply my skills to projects that make a <span className="font-bold">meaningful impact</span> and push the boundaries of technology.
         </p>
     </section>
   )
