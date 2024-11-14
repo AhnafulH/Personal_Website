@@ -1,17 +1,44 @@
-import React from 'react'
+"use client"
+import React, {useEffect} from 'react'
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useInView } from 'react-intersection-observer';
+import { sendEmail } from '@/app/api/send/sendEmail';
+import toast from 'react-hot-toast';
+import SubmitBtn from './submit_btn';
+import FireworksConfetti from './ui/FireworksConfetti';
+
 
 const Contact2 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.4,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Contact");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section className="border-2 border-red-200 scroll-mt-28"
-      id="contact"
+    <section className="scroll-mt-28"
+      id="contact" ref={ref}
     >
         <div className="text-center mb-10 mt-10">
           <h2 className="text-3xl font-bold mb-4">Contact</h2>
           <p className="text-lg text-gray-600">Say hello</p>
         </div>
         
-        <div className="w-full border-2 border-green-300 flex justify-center">
-          <form className="mt-10 flex flex-col w-[min(100%,50rem)]">
+        <div className="w-full flex justify-center">
+          <form className="mt-10 flex flex-col w-[min(100%,50rem)]" action={async (formData) => {
+            const { data, error } = await sendEmail(formData);
+            if (error) {
+              toast.error(error);
+              return;
+            }
+  
+            toast.success("Email delivered! We’ll be in touch shortly");
+            FireworksConfetti();
+          }}>
           <div className="flex space-x-3 mb-3">
           <div className="flex-1">
                 <label htmlFor="senderName" className="block mb-1 text-sm font-medium text-gray-700">Name:</label>
@@ -42,9 +69,7 @@ const Contact2 = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                required
                 placeholder="Let's collaborate!"
-                maxLength={500}
               />
             </div>
             <div className="mb-3">
@@ -58,9 +83,10 @@ const Contact2 = () => {
               />
             </div>
           <div className="flex items-center justify-start mb-3">
-            <button
+            {/* <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" 
-            type="submit">Submit</button>
+            type="submit">Submit</button> */}
+            <SubmitBtn />
           </div>
           </form>
 
