@@ -1,13 +1,25 @@
 "use client";
  
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/project-card";
 import Link from "next/link";
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useInView } from 'react-intersection-observer';
 
 const Project2 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.4,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Projects");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section className="scroll-mt-28" id="projects">
+    <section className="scroll-mt-28" id="projects" ref={ref}>
        <div className="text-center mt-10">
         <h2 className="font-bold text-4xl md:text-5xl text-center">Projects</h2>
         <p className="text-lg text-gray-600 py-5">A small selection of recent projects</p>

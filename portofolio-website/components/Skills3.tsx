@@ -1,13 +1,26 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import cpp from '@/public/skills_logo/c.svg'
 import { SiC } from 'react-icons/si';
 import { SiCplusplus } from 'react-icons/si';
 import { skill } from '@/lib/skill'
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useInView } from 'react-intersection-observer';
 
 import Image from 'next/image'
 const Skills3 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.4,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Skills");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section id="skills" className="scroll-mt-28">
+    <section id="skills" className="scroll-mt-28" ref={ref}>
       <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">My Skills</h2>
           <p className="text-lg text-gray-600">Technologies I have worked with</p>

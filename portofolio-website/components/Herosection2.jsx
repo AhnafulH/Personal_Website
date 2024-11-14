@@ -4,8 +4,9 @@ import { FaLinkedin, FaGithub, FaClipboard, FaCopy} from "react-icons/fa";
 import { LinkPreview } from "@/components/ui/link-preview";
 import confetti from "canvas-confetti"
 import ConfettiButton from '@/components/ui/Confetti'
-import React, {useState, useRef} from 'react';
-
+import { useInView } from 'react-intersection-observer';
+import React, {useState, useRef, useEffect} from 'react';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 
 const container = {
@@ -43,6 +44,17 @@ const containerSubheader = {
 const subheading = "Hey there! I'm Ahnaful";
 
 const HeroSection2 = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.6,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   const words = subheading.split(" ");
   const [copied, setCopied] = useState(false);
 
@@ -58,7 +70,7 @@ const HeroSection2 = () => {
   };
 
     return (
-      <section className="pb-20 pt-36">
+      <section className="pb-20 pt-36" ref={ref}>
         <div className="flex justify-center relative my-20 z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
             <motion.div className="my-4" initial="hidden" animate="visible" variants={container}>
