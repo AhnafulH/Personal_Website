@@ -3,8 +3,6 @@
 import React, { useEffect } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
-import blackberryqnx_logo from '@/public/images/blackberryqnx_logo.png'
 import { experiences } from '@/lib/experiences';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
@@ -12,7 +10,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 const Experience2 = () => {
   const {ref, inView}= useInView({
-    threshold: 0.4,
+    threshold: 0.5,
   });
   const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
   
@@ -23,48 +21,46 @@ const Experience2 = () => {
   }, [inView, setActiveSection, timeOfLastClick]);
   return (
 
-    <section id="experience" className="scroll-mt-28" ref={ref}>
+    <section id="experience" className="scroll-mt-28 mb-40" ref={ref}>
       <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-4">Experience</h2>
+          <h2 className="text-3xl font-medium mb-2">Experience</h2>
           <p className="text-lg text-gray-600">My work experiences</p>
         </div>
     <VerticalTimeline
       animate={true}
+      lineColor={'black'}
     >
       {experiences.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               visible={true}
               contentStyle={{
-                background: "rgba(255, 255, 255, 0.05)",
+                background: '#f3f4f6', color: '#000',
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
-              contentArrowStyle={{
-                borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
-              }}
+              contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
               date={item.date}
               icon={<div className='flex justify-center items-center w-full h-full'>
                 <img
                   src={item.logo.src}
-                  alt="bb"
-                  className='w-[60%] h-[60%] object-contain'
+                  alt={item.alt}
+                  className='w-[90%] h-[90%] object-contain'
                 />
               </div>}
               iconStyle={{
-                background: "rgba(255, 255, 255, 0.15)",
+                background: item.background_color,
                 fontSize: "1.5rem",
+                width: "65px",
+                height: "65px",
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              <h4 className="font-normal !mt-0">{item.company}</h4>
 
-              <ul className="list-disc">
+              <ul className="list-disc mt-4">
               {item.Points.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
@@ -72,57 +68,6 @@ const Experience2 = () => {
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
-    <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: '#f3f4f6', color: '#000',
-          boxShadow: "none",
-          border: "1px solid rgba(0, 0, 0, 0.05)",
-          textAlign: "left",
-          padding: "1.3rem 2rem",
-        }}
-        contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
-        date="2011 - present"
-        iconStyle={{ background: '#000', color: '#fff' }}
-        icon={
-            <div className='flex justify-center items-center w-full h-full'>
-              <img
-                src={blackberryqnx_logo.src}
-                alt="bb"
-                className='w-[60%] h-[60%] object-contain'
-              />
-            </div>
-          }
-        visible={true}
-    >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <p>
-        Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-        </p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-        date="2011 - present"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        icon={
-            <div className='flex justify-center items-center w-full h-full'>
-              <img
-                src={blackberryqnx_logo.src}
-                alt="bb"
-                className='w-[60%] h-[60%] object-contain'
-              />
-            </div>
-          }
-        visible={true}
-    >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <p>
-        Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-        </p>
-    </VerticalTimelineElement>
 </VerticalTimeline>
 </section>
   )

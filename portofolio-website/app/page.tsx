@@ -32,7 +32,8 @@ export default function Home() {
           {/* </div> */}
           <Experience2/>
           <Skills3/>
-          <ProjectCard/>
+          <Project/>
+          {/* <ProjectCard/> */}
           <Testimonial3/>
           <Contact2/>
           <Footer/>

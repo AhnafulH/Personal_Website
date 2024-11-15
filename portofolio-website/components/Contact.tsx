@@ -10,7 +10,7 @@ import FireworksConfetti from './ui/FireworksConfetti';
 
 const Contact2 = () => {
   const {ref, inView}= useInView({
-    threshold: 0.4,
+    threshold: 0.6,
   });
   const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
 
@@ -23,8 +23,8 @@ const Contact2 = () => {
     <section className="scroll-mt-28"
       id="contact" ref={ref}
     >
-        <div className="text-center mb-10 mt-10">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <div className="text-center mb-10 mt-20">
+          <h2 className="text-3xl font-medium mb-2">Contact</h2>
           <p className="text-lg text-gray-600">Say hello</p>
         </div>
         
@@ -46,13 +46,12 @@ const Contact2 = () => {
                   type="text"
                   id="senderName"
                   name="senderName"
-                  required
                   placeholder="John Doe"
                   maxLength={500}
                 />
               </div>
               <div className="flex-1">
-                <label htmlFor="senderEmail" className="block mb-1 text-sm font-medium text-gray-700">Email:</label>
+                <label htmlFor="senderEmail" className="block mb-1 text-sm font-medium text-gray-700">Email*:</label>
                 <input className="h-14 px-4 rounded-lg border border-black/10 w-full"
                   type="email"
                   id="senderEmail"
@@ -73,7 +72,7 @@ const Contact2 = () => {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="message" className="block mb-1 text-sm font-medium text-gray-700">Message:</label>
+              <label htmlFor="message" className="block mb-1 text-sm font-medium text-gray-700">Message*:</label>
               <textarea
                 className="h-52 rounded-lg border-black p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none w-full"
                 id="message"
@@ -83,9 +82,6 @@ const Contact2 = () => {
               />
             </div>
           <div className="flex items-center justify-start mb-3">
-            {/* <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline" 
-            type="submit">Submit</button> */}
             <SubmitBtn />
           </div>
           </form>

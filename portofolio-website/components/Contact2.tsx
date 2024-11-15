@@ -31,7 +31,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add form submission logic here
     console.log(formData);
   };
 
@@ -39,7 +38,7 @@ const Contact: React.FC = () => {
     <section id="contact" ref={ref}>
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-lg w-full">
-          <h2 className="text-2xl mb-6 text-center">Contact Me</h2>
+          <h2 className="text-2xl mb-2 text-center">Contact Me</h2>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
               Name
