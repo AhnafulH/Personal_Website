@@ -1,8 +1,10 @@
 "use client"
 
 import React, { useEffect } from 'react'
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer'
 import { useActiveSectionContext } from '@/context/active-section-context';
+import avatar from '@/public/images/avatar.svg';
 
 const Testimonial3 = () => {
   const {ref, inView}= useInView({
@@ -16,7 +18,7 @@ const Testimonial3 = () => {
     }
   }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section className="scroll-mt-28"
+    <section className="scroll-mt-28 mt-40"
     id="testimonial"
     ref={ref}>
       <div> 
@@ -29,7 +31,13 @@ const Testimonial3 = () => {
           <div className="w-1/2 rounded-lg overflow-hidden shadow-lg bg-white p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
-              <img className="w-20 h-20 rounded-full mr-4" src="https://via.placeholder.com/150" alt="Avatar" />
+            <Image 
+                  className="w-30 h-30 rounded-full mr-4" 
+                  src={avatar} 
+                  alt="Avatar" 
+                  width={80} 
+                  height={80} 
+                />
               <div>
                 <p className="text-xl font-bold text-gray-900">David Sarrazin</p>
                 <p className="text-gray-600">Principal Systems Software Developer</p>
@@ -37,9 +45,6 @@ const Testimonial3 = () => {
               </div>
             </div>
             <a href="https://www.linkedin.com/in/ahnaful-hoque/details/recommendations/" target="_blank" rel="noopener noreferrer">
-              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6 h-6 text-blue-500" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.353c0-1.276-.025-2.92-1.778-2.92-1.778 0-2.048 1.388-2.048 2.825v5.448h-3v-10h2.881v1.367h.041c.401-.759 1.378-1.557 2.837-1.557 3.033 0 3.591 1.995 3.591 4.59v5.6z"/>
-              </svg> */}
               <img className="w-6 h-6" src='/linkedin-icon-3.svg' alt="Linkdin icon"/>
             </a>
           </div>

@@ -1,7 +1,7 @@
 
 import { IconType } from 'react-icons';
 import { SiCplusplus, SiC, SiPython, SiJavascript, SiHtml5, SiCss3, SiNextdotjs, SiReact, SiSqlite, SiTailwindcss, SiBlackberry, SiJunit5 } from 'react-icons/si';
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaJava } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 type Skill = {
   skill_name: string;
@@ -20,6 +20,10 @@ const skill: Skill[] = [
   {
     skill_name: "Python",
     icon: SiPython,
+  },
+  {
+    skill_name: "Java",
+    icon: FaJava,
   },
   {
     skill_name: "Javascript",

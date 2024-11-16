@@ -27,8 +27,8 @@ const Project = () => {
 
       <CardContainer className="inter-var flex flex-wrap justify-center gap-8">
         {/* Project 1 */}
-        <div className="group">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-auto rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
+        <div className="group flex flex-col">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -52,27 +52,26 @@ const Project = () => {
               as="h1"
               className="text-xl md:text-2xl font-bold text-neutral-600 dark:text-white mt-4"
             >
-              Make things float in air
+              Smart traffic Control
             </CardItem>
             <CardItem translateZ="40" scale={1.05}>
-              <p className="text-sm lg:text-xl font-light text-gray-700 line-clamp-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p className="text-xs lg:text-sm font-light text-gray-700 line-clamp-4 mt-4">
+                A smart traffic control system that prioritizes the pedestrians and public transit, while cutting down wait times for individual cars.
               </p>
             </CardItem>
             <div className="flex justify-start items-center mt-10 gap-2">
               <CardItem translateZ="20" translateX={-30}>
-                <img src="/devpost-icon.svg" alt="Devpost" height={30} width={30} />
-              </CardItem>
-              <CardItem translateZ="20" translateX={-30}>
-                <img src="/iconmonstr-github-1.svg" alt="GitHub" />
+                <a href="https://devpost.com/software/smart-traffic-control" target="_blank" rel="noopener noreferrer">
+                  <img src="/devpost-icon.svg" alt="Devpost" height={30} width={30} />
+                </a>
               </CardItem>
             </div>
           </CardBody>
         </div>
 
         {/* Project 2 */}
-        <div className="group">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-auto rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
+        <div className="group flex flex-col">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -81,8 +80,8 @@ const Project = () => {
               className="w-full mt-4"
             >
               <Image
-                src="/images/smart_traffic_control.png"
-                alt="Smart Traffic Control"
+                src="/images/java_p.png"
+                alt="Event Lottery System"
                 height={1000}
                 width={1000}
                 className="h-60 w-full object-cover rounded-xl"
@@ -96,19 +95,18 @@ const Project = () => {
               as="h1"
               className="text-xl md:text-2xl font-bold text-neutral-600 dark:text-white mt-4"
             >
-              Another Amazing Project
+              Event Lottery System Application
             </CardItem>
             <CardItem translateZ="40" scale={1.05}>
-              <p className="text-sm lg:text-xl font-light text-gray-700 line-clamp-2">
-                This project explores something new and exciting, showcasing innovative solutions and advanced technologies.
+              <p className="text-xs lg:text-sm font-light text-gray-700 line-clamp-4 mt-4">
+                A mobile app that uses a lottery system to fairly allocate spots for high-demand community events, ensuring equal access for everyone, including those with time constraints or disabilities.
               </p>
             </CardItem>
             <div className="flex justify-start items-center mt-10 gap-2">
               <CardItem translateZ="20" translateX={-30}>
-                <img src="/devpost-icon.svg" alt="Devpost" height={30} width={30} />
-              </CardItem>
-              <CardItem translateZ="20" translateX={-30}>
-                <img src="/iconmonstr-github-1.svg" alt="GitHub" />
+                <a href="https://github.com/CMPUT301F24fusion1s/fusion1-events" target="_blank" rel="noopener noreferrer">
+                  <img src="/iconmonstr-github-1.svg" alt="GitHub" />
+                </a>
               </CardItem>
             </div>
           </CardBody>
