@@ -28,7 +28,7 @@ const Experience2 = () => {
         </div>
     <VerticalTimeline
       animate={true}
-      lineColor={'black'}
+      lineColor={'#f3f4f6'}
     >
       {experiences.map((item, index) => (
           <React.Fragment key={index}>
