@@ -75,7 +75,7 @@ const Project = () => {
 
         {/* Project 2 */}
         <div className="group flex flex-col relative">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] sm:h-[33] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
             <CardItem
               translateZ="100"
               rotateX={5}
