@@ -16,8 +16,8 @@ function About() {
     }
   }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section className="mb-30 mt-40 max-w-[45rem] text-center leading-8 mx-auto
-      sm:mb-40 scroll-mt-28 text-lg"
+    <section className="mt-40 max-w-[45rem] text-center leading-8 mx-auto 
+    scroll-mt-28 text-lg"
       ref={ref}
       id="about"
       >

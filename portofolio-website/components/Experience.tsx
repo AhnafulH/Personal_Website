@@ -10,7 +10,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 const Experience = () => {
   const {ref, inView}= useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
   const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
   
@@ -21,7 +21,7 @@ const Experience = () => {
   }, [inView, setActiveSection, timeOfLastClick]);
   return (
 
-    <section id="experience" className="scroll-mt-28 mb-40" ref={ref}>
+    <section id="experience" className="scroll-mt-28 mb-40 mt-40" ref={ref}>
       <div className="text-center mb-10">
           <h2 className="text-3xl font-medium mb-2">Experience</h2>
           <p className="text-lg text-gray-600">My work experiences</p>
