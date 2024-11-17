@@ -27,8 +27,8 @@ const Testimonial = () => {
           <p className="text-lg text-gray-600 py-1">Words That Inspire: How My Work Made an Impact</p>
         </div>
         
-        <div className="gap-5 flex justify-center">
-          <div className="w-1/2 rounded-lg overflow-hidden shadow-lg bg-white p-6">
+        <div className="gap-5 flex justify-center ">
+          <div className="w-1/2 rounded-lg overflow-hidden shadow-lg bg-white p-6 border border-black/10">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
             <Image 

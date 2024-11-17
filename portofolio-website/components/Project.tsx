@@ -62,7 +62,7 @@ const Project = () => {
             <div className="flex justify-start items-center mt-10 gap-2">
               <CardItem translateZ="20" translateX={-30}>
                 <a href="https://devpost.com/software/smart-traffic-control" target="_blank" rel="noopener noreferrer">
-                  <img src="/devpost-icon.svg" alt="Devpost" height={30} width={30} />
+                  <img src="/devpost-logo.svg" alt="Devpost" height={30} width={30} />
                 </a>
               </CardItem>
             </div>

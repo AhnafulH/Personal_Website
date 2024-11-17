@@ -74,7 +74,7 @@ const Contact = () => {
             <div className="mb-3">
               <label htmlFor="message" className="block mb-1 text-sm font-medium text-gray-700">Message*:</label>
               <textarea
-                className="h-52 rounded-lg border-black p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none w-full"
+                className="h-52 rounded-lg border border-black/10 p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none w-full"
                 id="message"
                 name="message"
                 placeholder="Hi Ahnaful,"

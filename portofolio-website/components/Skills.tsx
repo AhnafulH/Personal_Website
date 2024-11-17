@@ -26,7 +26,7 @@ const Skills = () => {
         </div>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skill.map(({ skill_name, icon: Icon }, index) => (
-            <li key={index} className="flex justify-center items-center gap-2 bg-white borderBlack rounded-full px-5 py-3 dark:bg-white/10 dark:text-white/80">
+            <li key={index} className="flex justify-center items-center gap-2 bg-white rounded-full px-5 py-3 border border-black/10">
                 <Icon size={25} color="black" />
                 <span>{skill_name}</span>
             </li>

@@ -29,4 +29,4 @@ const BadgeCard = () => {
   );
 };
 
-export default BadgeCard;
+export default BadgeCard

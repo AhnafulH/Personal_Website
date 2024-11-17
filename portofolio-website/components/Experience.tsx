@@ -53,8 +53,8 @@ const Experience = () => {
               iconStyle={{
                 background: item.background_color,
                 fontSize: "1.5rem",
-                width: "65px",
-                height: "65px",
+                // width: "65px",
+                // height: "65px",
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>

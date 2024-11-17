@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaClipboard, FaCopy} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCopy} from "react-icons/fa";
 import { LinkPreview } from "@/components/ui/link-preview";
 import confetti from "canvas-confetti"
 import ConfettiButton from '@/components/ui/Confetti'
@@ -118,19 +118,19 @@ const HeroSection = () => {
             </a>
             <div className="flex space-x-4 mt-4 sm:mt-0">
               <LinkPreview url="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-black/10">
                   <FaLinkedin className="text-3xl text-blue-700 hover:text-blue-900 transition duration-300" />
                 </div>
               </LinkPreview>
 
               <LinkPreview url="https://github.com/AhnafulH">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-black/10">
                   <FaGithub className="text-3xl text-gray-800 hover:text-black transition duration-300" />
                 </div>
               </LinkPreview>
 
               <LinkPreview url="https://devpost.com/Ahnaful" target="_blank" rel="noopener noreferrer">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-black/10">
                   <img src="/devpost-logo.svg" alt="Devpost" className="w-8 h-8 hover:opacity-80 transition duration-300" />
                 </div>
               </LinkPreview>
