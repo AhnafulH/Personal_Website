@@ -8,7 +8,7 @@ const Footer = () => {
     <section className="w-full pt-20 pb-10">
       <div className="flex flex-col items-center">
         <h3 className="heading text-[40px] md:text-5xl lg:max-w-[45vw] text-center font-bold">
-        Thanks for scrolling! Now, let's write the next chapter together
+        Thanks for scrolling! Now, let&apos;s write the next chapter together
         </h3>
         <div className="flex space-x-6 mt-5">
           <LinkPreview url="https://www.linkedin.com/in/ahnaful-hoque/" target="_blank" rel="noopener noreferrer">

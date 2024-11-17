@@ -49,7 +49,7 @@ const Testimonial = () => {
             </a>
           </div>
           <p className="text-gray-700 text-base mb-4 text-pretty mt-7">
-          I had the pleasure of working with Ahnaful for several of his work-terms, as a technical mentor/resource. Ahnaful was working on a long-term high-priority test project. Ahnaful has a wonderful attitude, and a good, no-nonsense approach to the task he's asked to do. 
+          I had the pleasure of working with Ahnaful for several of his work-terms, as a technical mentor/resource. Ahnaful was working on a long-term high-priority test project. Ahnaful has a wonderful attitude, and a good, no-nonsense approach to the task he&apos;s asked to do. 
           During the course of the project, he had to learn several technical skills, which he did very well. He worked closely with a group of eleven other co-ops students, plus a few different technical and project managers. 
           He collaborated well with the other team members, discussing solutions to problems, and reviewing code. He was well-liked by his teammates. Ahnaful would ask me for help when necessary, and always asked smart questions to ensure he understood the answer. 
           His questions were always well thought out, and trended towards more complex over the course of the work-term, as I would expect from somebody learning the subject matter. The project was a success, and it would not have been possible without his contribution
