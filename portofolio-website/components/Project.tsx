@@ -27,8 +27,8 @@ const Project = () => {
 
       <CardContainer className="inter-var flex flex-wrap justify-center gap-8">
         {/* Project 1 */}
-        <div className="group flex flex-col">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
+        <div className="group flex flex-col relative">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -52,17 +52,21 @@ const Project = () => {
               as="h1"
               className="text-xl md:text-2xl font-bold text-neutral-600 dark:text-white mt-4"
             >
-              Smart traffic Control
+              Smart Traffic Control
             </CardItem>
             <CardItem translateZ="40" scale={1.05}>
-              <p className="text-xs lg:text-sm font-light text-gray-700 line-clamp-4 mt-4">
+              <p className="text-xs lg:text-sm font-light text-gray-700 dark:text-gray-400 line-clamp-4 mt-4">
                 A smart traffic control system that prioritizes the pedestrians and public transit, while cutting down wait times for individual cars.
               </p>
             </CardItem>
-            <div className="flex justify-start items-center mt-10 gap-2">
-              <CardItem translateZ="20" translateX={-30}>
-                <a href="https://devpost.com/software/smart-traffic-control" target="_blank" rel="noopener noreferrer">
-                  <img src="/devpost-logo.svg" alt="Devpost" height={30} width={30} />
+            <div className="absolute bottom-6 left-6 flex gap-4">
+              <CardItem translateZ="20">
+                <a href="https://devpost.com/software/smart-traffic-control" target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src="/devpost-logo.svg"
+                    alt="Devpost"
+                    className="w-8 h-8"
+                  />
                 </a>
               </CardItem>
             </div>
@@ -70,8 +74,8 @@ const Project = () => {
         </div>
 
         {/* Project 2 */}
-        <div className="group flex flex-col">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 group-hover:translateY-2">
+        <div className="group flex flex-col relative">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -98,14 +102,18 @@ const Project = () => {
               Event Lottery System Application
             </CardItem>
             <CardItem translateZ="40" scale={1.05}>
-              <p className="text-xs lg:text-sm font-light text-gray-700 line-clamp-4 mt-4">
+              <p className="text-xs lg:text-sm font-light text-gray-700 dark:text-gray-400 line-clamp-4 mt-4">
                 A mobile app that uses a lottery system to fairly allocate spots for high-demand community events, ensuring equal access for everyone, including those with time constraints or disabilities.
               </p>
             </CardItem>
-            <div className="flex justify-start items-center mt-10 gap-2">
-              <CardItem translateZ="20" translateX={-30}>
-                <a href="https://github.com/CMPUT301F24fusion1s/fusion1-events" target="_blank" rel="noopener noreferrer">
-                  <img src="/iconmonstr-github-1.svg" alt="GitHub" />
+            <div className="absolute bottom-6 left-6 flex gap-4">
+              <CardItem translateZ="20">
+                <a href="https://github.com/CMPUT301F24fusion1s/fusion1-events" target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src="/iconmonstr-github-1.svg"
+                    alt="GitHub"
+                    className="w-8 h-8"
+                  />
                 </a>
               </CardItem>
             </div>
