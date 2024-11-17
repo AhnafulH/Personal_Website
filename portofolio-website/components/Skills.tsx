@@ -1,26 +1,40 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
 import { skill } from '@/lib/skill'
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useInView } from 'react-intersection-observer';
+import BadgeCard from './BadgeCard';
 import Image from 'next/image'
 
-
 const Skills = () => {
+  const {ref, inView}= useInView({
+    threshold: 0.6,
+  });
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Skills");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20">
-      <div className="container mx-auto py-10">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-4">My Skills</h2>
+    <section id="skills" className="scroll-mt-28 mb-40" ref={ref}>
+      <div className="text-center mb-10">
+          <h2 className="text-3xl font-medium mb-2">My Skills</h2>
           <p className="text-lg text-gray-600">Technologies I have worked with</p>
         </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-        {skill.map((item, index) => (
-          <div key={index} className="w-16 h-16">
-            <Image src={item.icon} alt={item.skill_name} width={64} height={64} />
-          </div>
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+        {skill.map(({ skill_name, icon: Icon }, index) => (
+            <li key={index} className="flex justify-center items-center gap-2 bg-white borderBlack rounded-full px-5 py-3 dark:bg-white/10 dark:text-white/80">
+                <Icon size={25} color="black" />
+                <span>{skill_name}</span>
+            </li>
         ))}
-      </div>
-    </div>
-  </section>
-);
+      </ul>
+      <BadgeCard/>
+    </section>
+  )
 }
 
 export default Skills

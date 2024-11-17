@@ -8,7 +8,7 @@ import SubmitBtn from './submit_btn';
 import FireworksConfetti from './ui/FireworksConfetti';
 
 
-const Contact2 = () => {
+const Contact = () => {
   const {ref, inView}= useInView({
     threshold: 0.6,
   });
@@ -91,4 +91,4 @@ const Contact2 = () => {
   )
 }
 
-export default Contact2
+export default Contact

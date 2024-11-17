@@ -43,7 +43,7 @@ const containerSubheader = {
 
 const subheading = "Hey there! I'm Ahnaful";
 
-const HeroSection2 = () => {
+const HeroSection = () => {
   const {ref, inView}= useInView({
     threshold: 0.6,
   });
@@ -111,7 +111,7 @@ const HeroSection2 = () => {
               </div>
             </button>
 
-            <a href="@/public/Ahnaful_Hoque_Resume" target="_blank" rel="noopener noreferrer">
+            <a href="/Ahnaful_Hoque_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <button className="text-lg text-white bg-blue-600 hover:bg-blue-800 transition duration-300 px-4 py-2 rounded-full">
                 View Resume
               </button>
@@ -142,4 +142,4 @@ const HeroSection2 = () => {
   );
 };
 
-export default HeroSection2;
+export default HeroSection

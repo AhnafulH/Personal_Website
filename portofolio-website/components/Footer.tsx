@@ -1,11 +1,10 @@
 import React from 'react'
 import ConfettiButton from '@/components/ui/Confetti'
 import { LinkPreview } from "@/components/ui/link-preview";
-import { FaLinkedin, FaGithub, FaClipboard, FaCopy} from "react-icons/fa";
+import { FaLinkedin, FaGithub} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    // https://freecodez.com
     <section className="w-full pt-20 pb-10">
       <div className="flex flex-col items-center">
         <h3 className="heading text-[40px] md:text-5xl lg:max-w-[45vw] text-center font-bold">
@@ -32,9 +31,7 @@ const Footer = () => {
 
       <div className="flex mt-12 md:flex-row flex-col justify-center items-center">
         <p className="md:text-lg text-base md:font-normal font-medium">
-          {/* Copyright © 2024 Adrian Hajdin */}
           Copyright © Ahnaful – Built with love, laughter, and lots of late nights
-          {/* All code, no nonsense */}
         </p>
       </div>
     </section>
