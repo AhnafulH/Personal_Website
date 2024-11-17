@@ -28,7 +28,7 @@ const Project = () => {
       <CardContainer className="inter-var flex flex-wrap justify-center gap-8">
         {/* Project 1 */}
         <div className="group flex flex-col relative">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[32rem] rounded-3xl p-6 pb-16 border transition-transform duration-200 group-hover:scale-105 relative">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -61,7 +61,12 @@ const Project = () => {
             </CardItem>
             <div className="absolute bottom-6 left-6 flex gap-4">
               <CardItem translateZ="20">
-                <a href="https://devpost.com/software/smart-traffic-control" target="_blank" rel="noopener noreferrer" className="block">
+                <a
+                  href="https://devpost.com/software/smart-traffic-control"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   <img
                     src="/devpost-logo.svg"
                     alt="Devpost"
@@ -75,7 +80,7 @@ const Project = () => {
 
         {/* Project 2 */}
         <div className="group flex flex-col relative">
-          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] h-[30rem] sm:h-[33] rounded-3xl p-6 border transition-transform duration-200 group-hover:scale-105 relative">
+          <CardBody className="bg-gray-50 dark:bg-black w-auto sm:w-[30rem] min-h-[32rem] rounded-3xl p-6 pb-16 border transition-transform duration-200 group-hover:scale-105 relative">
             <CardItem
               translateZ="100"
               rotateX={5}
@@ -102,13 +107,18 @@ const Project = () => {
               Event Lottery System Application
             </CardItem>
             <CardItem translateZ="40" scale={1.05}>
-              <p className="text-xs lg:text-sm font-light text-gray-700 dark:text-gray-400 line-clamp-4 mt-4">
+              <p className="text-xs lg:text-sm font-light text-gray-700 dark:text-gray-400 line-clamp-5 mt-4">
                 A mobile app that uses a lottery system to fairly allocate spots for high-demand community events, ensuring equal access for everyone, including those with time constraints or disabilities.
               </p>
             </CardItem>
             <div className="absolute bottom-6 left-6 flex gap-4">
               <CardItem translateZ="20">
-                <a href="https://github.com/CMPUT301F24fusion1s/fusion1-events" target="_blank" rel="noopener noreferrer" className="block">
+                <a
+                  href="https://github.com/CMPUT301F24fusion1s/fusion1-events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   <img
                     src="/iconmonstr-github-1.svg"
                     alt="GitHub"
